@@ -28,29 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblInicio = new MetroFramework.Drawing.Html.HtmlLabel();
             this.TxtUsuario = new MetroFramework.Controls.MetroTextBox();
             this.TxtContraseña = new MetroFramework.Controls.MetroTextBox();
             this.LblUsuario = new MetroFramework.Controls.MetroLabel();
             this.LblContraseña = new MetroFramework.Controls.MetroLabel();
-            this.PtcImagenSeguro = new System.Windows.Forms.PictureBox();
             this.GrpInicioDeSesiòn = new System.Windows.Forms.GroupBox();
             this.BtnIniciarSesion = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.PtcImagenSeguro)).BeginInit();
+            this.PtcImagenSeguro = new System.Windows.Forms.PictureBox();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.BtnCargarPorcentaje = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.GrpInicioDeSesiòn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PtcImagenSeguro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LblInicio
-            // 
-            this.LblInicio.AutoScroll = true;
-            this.LblInicio.AutoScrollMinSize = new System.Drawing.Size(180, 48);
-            this.LblInicio.BackColor = System.Drawing.SystemColors.Window;
-            this.LblInicio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblInicio.Location = new System.Drawing.Point(174, 42);
-            this.LblInicio.Name = "LblInicio";
-            this.LblInicio.Size = new System.Drawing.Size(180, 48);
-            this.LblInicio.TabIndex = 0;
-            this.LblInicio.Text = "Bienvenido!";
             // 
             // TxtUsuario
             // 
@@ -88,7 +78,7 @@
             // 
             // 
             this.TxtContraseña.CustomButton.Image = null;
-            this.TxtContraseña.CustomButton.Location = new System.Drawing.Point(70, 1);
+            this.TxtContraseña.CustomButton.Location = new System.Drawing.Point(93, 1);
             this.TxtContraseña.CustomButton.Name = "";
             this.TxtContraseña.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtContraseña.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -106,7 +96,7 @@
             this.TxtContraseña.SelectionLength = 0;
             this.TxtContraseña.SelectionStart = 0;
             this.TxtContraseña.ShortcutsEnabled = true;
-            this.TxtContraseña.Size = new System.Drawing.Size(92, 23);
+            this.TxtContraseña.Size = new System.Drawing.Size(115, 23);
             this.TxtContraseña.TabIndex = 2;
             this.TxtContraseña.UseSelectable = true;
             this.TxtContraseña.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -128,16 +118,6 @@
             this.LblContraseña.TabIndex = 5;
             this.LblContraseña.Text = "Contraseña:";
             // 
-            // PtcImagenSeguro
-            // 
-            this.PtcImagenSeguro.Image = global::PryMendozaIEDefinitivo.Properties.Resources.Seguros;
-            this.PtcImagenSeguro.Location = new System.Drawing.Point(139, 106);
-            this.PtcImagenSeguro.Name = "PtcImagenSeguro";
-            this.PtcImagenSeguro.Size = new System.Drawing.Size(240, 149);
-            this.PtcImagenSeguro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PtcImagenSeguro.TabIndex = 6;
-            this.PtcImagenSeguro.TabStop = false;
-            // 
             // GrpInicioDeSesiòn
             // 
             this.GrpInicioDeSesiòn.Controls.Add(this.BtnIniciarSesion);
@@ -145,43 +125,77 @@
             this.GrpInicioDeSesiòn.Controls.Add(this.LblUsuario);
             this.GrpInicioDeSesiòn.Controls.Add(this.TxtContraseña);
             this.GrpInicioDeSesiòn.Controls.Add(this.TxtUsuario);
-            this.GrpInicioDeSesiòn.Location = new System.Drawing.Point(139, 294);
+            this.GrpInicioDeSesiòn.Location = new System.Drawing.Point(132, 294);
             this.GrpInicioDeSesiòn.Name = "GrpInicioDeSesiòn";
-            this.GrpInicioDeSesiòn.Size = new System.Drawing.Size(240, 143);
+            this.GrpInicioDeSesiòn.Size = new System.Drawing.Size(247, 147);
             this.GrpInicioDeSesiòn.TabIndex = 7;
             this.GrpInicioDeSesiòn.TabStop = false;
             this.GrpInicioDeSesiòn.Text = "Inicio de sesión";
             // 
             // BtnIniciarSesion
             // 
-            this.BtnIniciarSesion.Location = new System.Drawing.Point(86, 114);
+            this.BtnIniciarSesion.Location = new System.Drawing.Point(89, 114);
             this.BtnIniciarSesion.Name = "BtnIniciarSesion";
             this.BtnIniciarSesion.Size = new System.Drawing.Size(75, 23);
             this.BtnIniciarSesion.TabIndex = 8;
             this.BtnIniciarSesion.Text = "Inciar sesión";
             this.BtnIniciarSesion.UseSelectable = true;
             // 
+            // PtcImagenSeguro
+            // 
+            this.PtcImagenSeguro.Image = global::PryMendozaIEDefinitivo.Properties.Resources.Seguros;
+            this.PtcImagenSeguro.Location = new System.Drawing.Point(54, 121);
+            this.PtcImagenSeguro.Name = "PtcImagenSeguro";
+            this.PtcImagenSeguro.Size = new System.Drawing.Size(409, 134);
+            this.PtcImagenSeguro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PtcImagenSeguro.TabIndex = 6;
+            this.PtcImagenSeguro.TabStop = false;
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(54, 509);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(409, 23);
+            this.metroProgressBar1.TabIndex = 8;
+            // 
+            // BtnCargarPorcentaje
+            // 
+            this.BtnCargarPorcentaje.Location = new System.Drawing.Point(54, 548);
+            this.BtnCargarPorcentaje.Name = "BtnCargarPorcentaje";
+            this.BtnCargarPorcentaje.Size = new System.Drawing.Size(409, 29);
+            this.BtnCargarPorcentaje.TabIndex = 9;
+            this.BtnCargarPorcentaje.UseSelectable = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(215, 487);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel1.TabIndex = 10;
+            this.metroLabel1.Text = "metroLabel1";
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 500);
+            this.ClientSize = new System.Drawing.Size(529, 612);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.BtnCargarPorcentaje);
+            this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.GrpInicioDeSesiòn);
             this.Controls.Add(this.PtcImagenSeguro);
-            this.Controls.Add(this.LblInicio);
             this.Name = "FrmInicio";
-            this.Text = "Inicio";
+            this.Text = "Ingresar";
             this.Load += new System.EventHandler(this.FrmInicio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PtcImagenSeguro)).EndInit();
             this.GrpInicioDeSesiòn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PtcImagenSeguro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Drawing.Html.HtmlLabel LblInicio;
         private MetroFramework.Controls.MetroTextBox TxtUsuario;
         private MetroFramework.Controls.MetroTextBox TxtContraseña;
         private MetroFramework.Controls.MetroLabel LblUsuario;
@@ -189,6 +203,9 @@
         private System.Windows.Forms.PictureBox PtcImagenSeguro;
         private System.Windows.Forms.GroupBox GrpInicioDeSesiòn;
         private MetroFramework.Controls.MetroButton BtnIniciarSesion;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroButton BtnCargarPorcentaje;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
 
