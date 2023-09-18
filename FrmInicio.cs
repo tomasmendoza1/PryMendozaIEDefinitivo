@@ -22,5 +22,11 @@ namespace PryMendozaIEDefinitivo
         {
 
         }
+
+        private void BtnCargarPorcentaje_Click(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }

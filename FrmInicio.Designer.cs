@@ -35,9 +35,9 @@
             this.GrpInicioDeSesiòn = new System.Windows.Forms.GroupBox();
             this.BtnIniciarSesion = new MetroFramework.Controls.MetroButton();
             this.PtcImagenSeguro = new System.Windows.Forms.PictureBox();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.MetroBar = new MetroFramework.Controls.MetroProgressBar();
             this.BtnCargarPorcentaje = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.LblPorcentaje = new MetroFramework.Controls.MetroLabel();
             this.GrpInicioDeSesiòn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PtcImagenSeguro)).BeginInit();
             this.SuspendLayout();
@@ -151,12 +151,12 @@
             this.PtcImagenSeguro.TabIndex = 6;
             this.PtcImagenSeguro.TabStop = false;
             // 
-            // metroProgressBar1
+            // MetroBar
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(54, 509);
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(409, 23);
-            this.metroProgressBar1.TabIndex = 8;
+            this.MetroBar.Location = new System.Drawing.Point(54, 509);
+            this.MetroBar.Name = "MetroBar";
+            this.MetroBar.Size = new System.Drawing.Size(409, 23);
+            this.MetroBar.TabIndex = 8;
             // 
             // BtnCargarPorcentaje
             // 
@@ -165,24 +165,25 @@
             this.BtnCargarPorcentaje.Size = new System.Drawing.Size(409, 29);
             this.BtnCargarPorcentaje.TabIndex = 9;
             this.BtnCargarPorcentaje.UseSelectable = true;
+            this.BtnCargarPorcentaje.Click += new System.EventHandler(this.BtnCargarPorcentaje_Click);
             // 
-            // metroLabel1
+            // LblPorcentaje
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(215, 487);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel1.TabIndex = 10;
-            this.metroLabel1.Text = "metroLabel1";
+            this.LblPorcentaje.AutoSize = true;
+            this.LblPorcentaje.Location = new System.Drawing.Point(215, 487);
+            this.LblPorcentaje.Name = "LblPorcentaje";
+            this.LblPorcentaje.Size = new System.Drawing.Size(81, 19);
+            this.LblPorcentaje.TabIndex = 10;
+            this.LblPorcentaje.Text = "metroLabel1";
             // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 612);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.LblPorcentaje);
             this.Controls.Add(this.BtnCargarPorcentaje);
-            this.Controls.Add(this.metroProgressBar1);
+            this.Controls.Add(this.MetroBar);
             this.Controls.Add(this.GrpInicioDeSesiòn);
             this.Controls.Add(this.PtcImagenSeguro);
             this.Name = "FrmInicio";
@@ -203,9 +204,9 @@
         private System.Windows.Forms.PictureBox PtcImagenSeguro;
         private System.Windows.Forms.GroupBox GrpInicioDeSesiòn;
         private MetroFramework.Controls.MetroButton BtnIniciarSesion;
-        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroProgressBar MetroBar;
         private MetroFramework.Controls.MetroButton BtnCargarPorcentaje;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel LblPorcentaje;
     }
 }
 
